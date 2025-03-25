@@ -1,18 +1,23 @@
 require_relative 'lib/game'
 
-game = Board.new
+puts "Enter player one's name: "
+player_one = gets.chomp
 
+puts "Enter player two's name: "
+player_two = gets.chomp
 
+new_game = Game.new(player_one, player_two)
+new_game.play_game()
 
-puts 'Do you want to play again? (y/n)'
-rematch = gets.chomp
+rematch = false
+until rematch
+  puts 'Do you want to play again? (y/n)'
+  rematch = gets.chomp
 
-if rematch.downcase == 'y'
-  plr_one_pick = []
-  plr_two_pick = []
-  winner = false
-  game.new_game
-  play_game()
-else
-  puts 'Ok, bye!'
+  if rematch.downcase == 'y'
+    new_game.play_game()
+    rematch = false
+  else
+    puts 'Ok, bye!'
+  end
 end

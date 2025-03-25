@@ -18,6 +18,8 @@ class Board
   end
 
   def player_two_move(move)
+    move = move.to_s
+    
     @first_row = @first_row.gsub(move, 'o')
     @second_row = @second_row.gsub(move, 'o')
     @third_row = @third_row.gsub(move, 'o')
@@ -34,6 +36,3 @@ class Board
   end
 
 end
-
-# game = Board.new
-# game.new_game
