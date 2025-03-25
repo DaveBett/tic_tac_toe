@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/game'
 
 puts "Enter player one's name: "
@@ -7,7 +9,7 @@ puts "Enter player two's name: "
 player_two = gets.chomp
 
 new_game = Game.new(player_one, player_two)
-new_game.play_game()
+new_game.play_game
 
 rematch = false
 until rematch
@@ -15,7 +17,7 @@ until rematch
   rematch = gets.chomp
 
   if rematch.downcase == 'y'
-    new_game.play_game()
+    new_game.play_game
     rematch = false
   else
     puts 'Ok, bye!'
