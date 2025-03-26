@@ -2,8 +2,9 @@
 
 class Board
   def reset
-    @first_row = '_1_|_2_|_3_'
-    @second_row = '_4_|_5_|_6_'
+    @first_row = ' 1 | 2 | 3 '
+    @divider = '---+---+---'
+    @second_row = ' 4 | 5 | 6 '
     @third_row = ' 7 | 8 | 9 '
     puts move_result
   end
@@ -32,7 +33,9 @@ class Board
 
   def move_result
     puts @first_row
+    puts @divider
     puts @second_row
+    puts @divider
     puts @third_row
   end
 end

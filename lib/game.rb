@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative 'board'
-require 'pry-byebug'
 
 class Game
   def initialize(player_one, player_two)
